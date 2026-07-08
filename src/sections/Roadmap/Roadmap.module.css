@@ -1,0 +1,106 @@
+.section {
+  background: var(--color-surface);
+}
+
+.timeline {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-lg);
+}
+
+.timelineLine {
+  position: absolute;
+  left: 35px;
+  top: 10px;
+  bottom: 10px;
+  width: 2px;
+  background: var(--color-line);
+}
+
+.stageWrap {
+  position: relative;
+}
+
+.stage {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: 70px 1fr;
+  gap: var(--space-md);
+  align-items: start;
+}
+
+.stageNumber {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background: var(--color-surface-raised);
+  border: 1px solid var(--color-line-strong);
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1.15rem;
+  color: var(--color-primary);
+  flex-shrink: 0;
+}
+
+.stageBody {
+  background: var(--color-surface-raised);
+  border: 1px solid var(--color-line);
+  border-radius: var(--radius-md);
+  padding: var(--space-md) var(--space-lg);
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.stageBody h3 {
+  font-size: 1.15rem;
+  font-weight: 600;
+}
+
+.stageBody p {
+  font-size: 0.94rem;
+  color: var(--color-ink-soft);
+  line-height: 1.65;
+  max-width: 60ch;
+}
+
+.output {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  width: fit-content;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--color-accent-strong);
+  margin-top: 0.35rem;
+}
+
+.output::before {
+  content: "";
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--color-accent);
+}
+
+@media (max-width: 640px) {
+  .timelineLine {
+    left: 25px;
+  }
+  .stage {
+    grid-template-columns: 50px 1fr;
+  }
+  .stageNumber {
+    width: 50px;
+    height: 50px;
+    font-size: 0.95rem;
+  }
+  .stageBody {
+    padding: var(--space-sm) var(--space-md);
+  }
+}

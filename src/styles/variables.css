@@ -1,0 +1,78 @@
+/**
+ * Design tokens
+ * -----------------------------------------------------------------------
+ * Light enterprise theme. Palette is built around the idea of a layered
+ * technology stack: a deep indigo "structure" colour, a teal "data /
+ * integration" accent, and a warm amber accent reserved for AI moments.
+ * Poppins is the only typeface, carried across every weight in the scale.
+ */
+:root {
+  /* Surfaces */
+  --color-bg: #fafbfd;
+  --color-surface: #f2f4fa;
+  --color-surface-alt: #eef1fb;
+  --color-surface-raised: #ffffff;
+  --color-line: #e2e6f0;
+  --color-line-strong: #d3d9ea;
+
+  /* Ink */
+  --color-ink: #0b1220;
+  --color-ink-soft: #4a5568;
+  --color-ink-faint: #7c869c;
+
+  /* Brand structure */
+  --color-primary: #14328c;
+  --color-primary-strong: #0b2166;
+  --color-primary-soft: #2f53b8;
+
+  /* Accents */
+  --color-accent: #0ec9b9;
+  --color-accent-strong: #0a9c8f;
+  --color-accent-warm: #ffb020;
+  --color-accent-warm-strong: #e69200;
+
+  --color-white: #ffffff;
+
+  /* Typography */
+  --font-display: "Poppins", "Segoe UI", sans-serif;
+  --font-body: "Poppins", "Segoe UI", sans-serif;
+
+  --fs-hero: clamp(2.2rem, 3.8vw, 3.6rem);
+  --fs-h1: clamp(1.8rem, 2.8vw, 2.6rem);
+  --fs-h2: clamp(1.35rem, 2vw, 1.85rem);
+  --fs-h3: clamp(0.95rem, 1.2vw, 1.2rem);
+  --fs-body-lg: 0.95rem;
+  --fs-body: 0.85rem;
+  --fs-small: 0.75rem;
+  --fs-eyebrow: 0.68rem;
+
+  /* Spacing scale */
+  --space-3xs: 0.2rem;
+  --space-2xs: 0.4rem;
+  --space-xs: 0.6rem;
+  --space-sm: 0.8rem;
+  --space-md: 1.2rem;
+  --space-lg: 2rem;
+  --space-xl: 3.2rem;
+  --space-2xl: 4.8rem;
+  --space-3xl: 6.4rem;
+
+  /* Shape */
+  --radius-sm: 10px;
+  --radius-md: 16px;
+  --radius-lg: 24px;
+  --radius-pill: 999px;
+
+  /* Motion */
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-standard: cubic-bezier(0.4, 0, 0.2, 1);
+  --dur-fast: 180ms;
+  --dur-med: 420ms;
+  --dur-slow: 900ms;
+
+  /* Layout */
+  --content-max: 1240px;
+  --shadow-sm: 0 1px 2px rgba(11, 18, 32, 0.06);
+  --shadow-md: 0 12px 32px -12px rgba(11, 18, 32, 0.18);
+  --shadow-lg: 0 30px 60px -20px rgba(11, 18, 32, 0.28);
+}

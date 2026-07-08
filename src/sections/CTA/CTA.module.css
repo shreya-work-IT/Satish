@@ -1,0 +1,68 @@
+.section {
+  background: var(--color-bg);
+}
+
+.panel {
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(135deg, var(--color-primary-strong), var(--color-primary));
+  border-radius: var(--radius-lg);
+  padding: clamp(2.5rem, 6vw, 5rem);
+}
+
+.glow {
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  right: -140px;
+  top: -160px;
+  background: radial-gradient(circle, var(--color-accent) 0%, transparent 70%);
+  opacity: 0.35;
+  border-radius: 50%;
+}
+
+.content {
+  position: relative;
+  z-index: 1;
+  max-width: 640px;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+
+.panel :global(.eyebrow) {
+  color: var(--color-accent-warm);
+}
+
+.panel :global(.eyebrow)::before {
+  background: var(--color-accent-warm);
+}
+
+.title {
+  font-size: var(--fs-h1);
+  color: #ffffff;
+  line-height: 1.2;
+}
+
+.sub {
+  font-size: var(--fs-body-lg);
+  color: rgba(255, 255, 255, 0.78);
+  line-height: 1.7;
+}
+
+.actions {
+  display: flex;
+  gap: var(--space-sm);
+  flex-wrap: wrap;
+  margin-top: var(--space-sm);
+}
+
+.outlineOnDark {
+  color: #ffffff;
+  border-color: rgba(255, 255, 255, 0.35);
+}
+
+.outlineOnDark:hover {
+  border-color: #ffffff;
+  color: #ffffff;
+}

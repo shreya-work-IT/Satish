@@ -1,0 +1,21 @@
+{
+  "name": "nexora-dynamics-platform",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Enterprise marketing website for a Dynamics 365, Dataverse, Power Platform, Azure and AI transformation consultancy.",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "lint": "eslint src --ext .js,.jsx"
+  },
+  "dependencies": {
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^4.3.1",
+    "vite": "^5.4.1"
+  }
+}
