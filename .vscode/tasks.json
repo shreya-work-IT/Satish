@@ -30,6 +30,13 @@
 			"command": "npm run build",
 			"isBackground": false,
 			"group": "build"
+		},
+		{
+			"label": "Publish to GitHub Pages",
+			"type": "shell",
+			"command": "git add .github/workflows/deploy.yml vite.config.js package.json .nojekyll && git commit -m \"Configure GitHub Pages deployment\" && git push origin main",
+			"isBackground": false,
+			"group": "build"
 		}
 	]
 }
