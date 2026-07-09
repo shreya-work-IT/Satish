@@ -32,54 +32,60 @@ const layers = [
 export function Architecture() {
   return (
     <section id="architecture" className={`section-pad ${styles.section}`}>
-      <div className={`container ${styles.grid}`}>
-        <Reveal as="div" className={styles.pyramidWrap}>
-          <div className={styles.pyramid}>
-            <div className={`${styles.pyramidLayer} ${styles.pIntelligence}`}>
-              <div className={styles.pyramidContent}>
-                <span className={styles.pyramidLabel}>Intelligence — AI</span>
-              </div>
-            </div>
-            <div className={`${styles.pyramidLayer} ${styles.pExperience}`}>
-              <div className={styles.pyramidContent}>
-                <span className={styles.pyramidLabel}>Experience — Dynamics 365</span>
-              </div>
-            </div>
-            <div className={`${styles.pyramidLayer} ${styles.pPlatform}`}>
-              <div className={styles.pyramidContent}>
-                <span className={styles.pyramidLabel}>Platform — Power Platform & Dataverse</span>
-              </div>
-            </div>
-            <div className={`${styles.pyramidLayer} ${styles.pFoundation}`}>
-              <div className={styles.pyramidContent}>
-                <span className={styles.pyramidLabel}>Foundation — Azure</span>
-              </div>
-            </div>
-          </div>
-        </Reveal>
+      <div className={styles.backdrop} aria-hidden="true" />
+      <div className={`container ${styles.inner}`}>
+        <SectionHeading
+          eyebrow="Architecture"
+          title="One stack, four layers, built in that order."
+          description="This is the shape of almost every engagement: a solid Azure foundation, a governed Power Platform and Dataverse layer, Dynamics 365 experiences on top, and AI running through all three."
+          align="center"
+        />
 
-        <div className={styles.copy}>
-          <SectionHeading
-            eyebrow="Architecture"
-            title="One stack, four layers, built in that order."
-            description="This is the shape of almost every engagement: a solid Azure foundation, a governed Power Platform and Dataverse layer, Dynamics 365 experiences on top, and AI running through all three."
-          />
-
-          <div className={styles.layerList}>
-            {layers.map((layer, i) => (
-              <Reveal
-                as="div"
-                key={layer.key}
-                delay={i * 90}
-                className={`${styles.layerItem} ${styles[layer.key]}`}
-              >
-                <span className={styles.layerDot} />
-                <div>
-                  <h3>{layer.title}</h3>
-                  <p>{layer.description}</p>
+        <div className={styles.grid}>
+          <Reveal as="div" className={styles.visualWrap}>
+            <div className={styles.visualCard}>
+              <div className={styles.flowRow}>
+                <div className={`${styles.flowNode} ${styles.flowFoundation}`}>
+                  <span className={styles.flowTag}>01</span>
+                  <span className={styles.flowLabel}>Foundation</span>
                 </div>
-              </Reveal>
-            ))}
+                <div className={styles.flowConnector} />
+                <div className={`${styles.flowNode} ${styles.flowPlatform}`}>
+                  <span className={styles.flowTag}>02</span>
+                  <span className={styles.flowLabel}>Platform</span>
+                </div>
+                <div className={styles.flowConnector} />
+                <div className={`${styles.flowNode} ${styles.flowExperience}`}>
+                  <span className={styles.flowTag}>03</span>
+                  <span className={styles.flowLabel}>Experience</span>
+                </div>
+                <div className={styles.flowConnector} />
+                <div className={`${styles.flowNode} ${styles.flowIntelligence}`}>
+                  <span className={styles.flowTag}>04</span>
+                  <span className={styles.flowLabel}>Intelligence</span>
+                </div>
+              </div>
+              <p className={styles.visualCaption}>A horizontal stack of capability layers that grow from platform to experience to intelligence.</p>
+            </div>
+          </Reveal>
+
+          <div className={styles.copy}>
+            <div className={styles.layerList}>
+              {layers.map((layer, i) => (
+                <Reveal
+                  as="div"
+                  key={layer.key}
+                  delay={i * 90}
+                  className={`${styles.layerItem} ${styles[layer.key]}`}
+                >
+                  <span className={styles.layerDot} />
+                  <div>
+                    <h3>{layer.title}</h3>
+                    <p>{layer.description}</p>
+                  </div>
+                </Reveal>
+              ))}
+            </div>
           </div>
         </div>
       </div>
